@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useSelector } from 'react-redux';
-import { fetchCurrentUser } from '../redux/slices/authSlice';
-const TaskDetailsModal = ({ isOpen, onClose, task, onUpdateTask, onDeleteTask, isLoading }) => {
+const TaskDetailsModal = ({ isOpen, onClose, task, onUpdateTask, isLoading }) => {
   const [formData, setFormData] = useState({
     title: task?.title || '',
     description: task?.description || '',

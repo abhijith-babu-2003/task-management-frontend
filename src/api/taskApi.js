@@ -1,4 +1,5 @@
-// taskApi.js
+/* eslint-disable no-useless-catch */
+
 import axios from 'axios';
 
 
@@ -46,7 +47,6 @@ api.interceptors.response.use(
 );
 
 export const taskApi = {
-  // Create a new task in a column
   createTask: async ({ columnId, data }) => {
     if (!columnId) {
       throw new Error('Invalid columnId');
